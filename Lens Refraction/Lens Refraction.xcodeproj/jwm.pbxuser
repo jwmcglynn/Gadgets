@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = FBC007810EDD2EFE0003A992 /* Lens Refraction */;
+		activeTarget = 8D1107260486CEB800E47090 /* Lens Refraction */;
+		addToTargets = (
+			8D1107260486CEB800E47090 /* Lens Refraction */,
+		);
+		codeSenseManager = FBC007940EDD2F030003A992 /* Code sense */;
+		executables = (
+			FBC007810EDD2EFE0003A992 /* Lens Refraction */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					364,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					324,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 249376510;
+			PBXWorkspaceStateSaveDate = 249376510;
+		};
+		perUserProjectItems = {
+			FBC007AE0EDD83FF0003A992 /* PBXTextBookmark */ = FBC007AE0EDD83FF0003A992 /* PBXTextBookmark */;
+			FBC007AF0EDD83FF0003A992 /* PBXBookmark */ = FBC007AF0EDD83FF0003A992 /* PBXBookmark */;
+			FBC007B00EDD83FF0003A992 /* PBXTextBookmark */ = FBC007B00EDD83FF0003A992 /* PBXTextBookmark */;
+			FBC007B10EDD83FF0003A992 /* PBXTextBookmark */ = FBC007B10EDD83FF0003A992 /* PBXTextBookmark */;
+			FBC007B50EDD84640003A992 /* PBXTextBookmark */ = FBC007B50EDD84640003A992 /* PBXTextBookmark */;
+			FBC007B70EDD84F00003A992 /* PBXTextBookmark */ = FBC007B70EDD84F00003A992 /* PBXTextBookmark */;
+			FBC007B80EDD84F00003A992 /* PBXTextBookmark */ = FBC007B80EDD84F00003A992 /* PBXTextBookmark */;
+			FBC007BB0EDD85F70003A992 /* PBXTextBookmark */ = FBC007BB0EDD85F70003A992 /* PBXTextBookmark */;
+			FBC007BC0EDD85F70003A992 /* PBXTextBookmark */ = FBC007BC0EDD85F70003A992 /* PBXTextBookmark */;
+			FBC007BD0EDD85F70003A992 /* PBXTextBookmark */ = FBC007BD0EDD85F70003A992 /* PBXTextBookmark */;
+			FBC007BE0EDD85F70003A992 /* PBXTextBookmark */ = FBC007BE0EDD85F70003A992 /* PBXTextBookmark */;
+			FBC007BF0EDD85F80003A992 /* PBXTextBookmark */ = FBC007BF0EDD85F80003A992 /* PBXTextBookmark */;
+		};
+		sourceControlManager = FBC007930EDD2F030003A992 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* Lens Refraction */ = {
+		activeExec = 0;
+		executables = (
+			FBC007810EDD2EFE0003A992 /* Lens Refraction */,
+		);
+	};
+	FBC007810EDD2EFE0003A992 /* Lens Refraction */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "Lens Refraction";
+		sourceDirectories = (
+		);
+	};
+	FBC007930EDD2F030003A992 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	FBC007940EDD2F030003A992 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	FBC007AB0EDD83E30003A992 /* LensController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 210}}";
+			sepNavSelRange = "{103, 0}";
+			sepNavVisRange = "{0, 165}";
+		};
+	};
+	FBC007AC0EDD83E30003A992 /* LensController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 101}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 65}";
+		};
+	};
+	FBC007AE0EDD83FF0003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AC0EDD83E30003A992 /* LensController.m */;
+		name = "LensController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 65;
+		vrLoc = 0;
+	};
+	FBC007AF0EDD83FF0003A992 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+	};
+	FBC007B00EDD83FF0003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AC0EDD83E30003A992 /* LensController.m */;
+		name = "LensController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 65;
+		vrLoc = 0;
+	};
+	FBC007B10EDD83FF0003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 4";
+		rLen = 0;
+		rLoc = 84;
+		rType = 0;
+		vrLen = 74;
+		vrLoc = 0;
+	};
+	FBC007B20EDD842E0003A992 /* CairoView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {542, 112}}";
+			sepNavSelRange = "{54, 0}";
+			sepNavVisRange = "{0, 61}";
+		};
+	};
+	FBC007B50EDD84640003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 9";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 178;
+		vrLoc = 25;
+	};
+	FBC007B70EDD84F00003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 9";
+		rLen = 0;
+		rLoc = 219;
+		rType = 0;
+		vrLen = 178;
+		vrLoc = 25;
+	};
+	FBC007B80EDD84F00003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 3";
+		rLen = 0;
+		rLoc = 42;
+		rType = 0;
+		vrLen = 165;
+		vrLoc = 0;
+	};
+	FBC007BB0EDD85F70003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 6";
+		rLen = 0;
+		rLoc = 103;
+		rType = 0;
+		vrLen = 165;
+		vrLoc = 0;
+	};
+	FBC007BC0EDD85F70003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: syntax error before '{' token";
+		fRef = FBC007B20EDD842E0003A992 /* CairoView.h */;
+		rLen = 1;
+		rLoc = 2;
+		rType = 1;
+	};
+	FBC007BD0EDD85F70003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007AB0EDD83E30003A992 /* LensController.h */;
+		name = "LensController.h: 6";
+		rLen = 0;
+		rLoc = 103;
+		rType = 0;
+		vrLen = 165;
+		vrLoc = 0;
+	};
+	FBC007BE0EDD85F70003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007B20EDD842E0003A992 /* CairoView.h */;
+		name = "CairoView.h: 3";
+		rLen = 0;
+		rLoc = 54;
+		rType = 0;
+		vrLen = 61;
+		vrLoc = 0;
+	};
+	FBC007BF0EDD85F80003A992 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = FBC007B20EDD842E0003A992 /* CairoView.h */;
+		name = "CairoView.h: 3";
+		rLen = 0;
+		rLoc = 54;
+		rType = 0;
+		vrLen = 61;
+		vrLoc = 0;
+	};
+}

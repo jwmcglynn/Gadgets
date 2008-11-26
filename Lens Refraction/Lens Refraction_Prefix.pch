@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Lens Refraction' target in the 'Lens Refraction' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
