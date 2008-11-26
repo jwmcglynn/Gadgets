@@ -74,6 +74,8 @@
 			children = (
 				FBC007AB0EDD83E30003A992 /* LensController.h */,
 				FBC007AC0EDD83E30003A992 /* LensController.m */,
+				FBC007B20EDD842E0003A992 /* CairoView.h */,
+				FBC007B30EDD842E0003A992 /* CairoView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -113,8 +115,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				FBC007B20EDD842E0003A992 /* CairoView.h */,
-				FBC007B30EDD842E0003A992 /* CairoView.m */,
 			);
 			name = "Lens Refraction";
 			sourceTree = "<group>";
