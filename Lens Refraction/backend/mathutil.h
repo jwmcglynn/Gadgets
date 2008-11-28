@@ -83,10 +83,17 @@ inline T abs_(const T& a) {
 	return a < (T) 0 ? -a : a;
 }
 
-// Rounds a double to an integer.
+/// Rounds a double to an integer.
 template<typename T>
 inline T round_(T orig) {
 	return (T) floor(f64(orig + 0.5));
+}
+
+/// Gets the sign of a number.
+template<typename T>
+inline T sign_(T orig) {
+	if (orig < T(0)) return T(-1);
+	else return T(1);
 }
 
 /**

@@ -1,4 +1,5 @@
 #import <Cocoa/Cocoa.h>
+#include <cairo/cairo.h>
 
 @class CairoView;
 
@@ -20,6 +21,11 @@ class lens_backend;
  * Constructor, called after the .nib is loaded.
 **/
 - (void) awakeFromNib;
+
+/**
+ * Render the cairo surface.
+**/
+- (void) onRender: (cairo_t *) context: (float) width: (float) height;
 
 /// Called when the left radius field changes.
 - (void) onLeftRadiusChange: (id) caller;

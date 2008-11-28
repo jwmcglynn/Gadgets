@@ -12,12 +12,20 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		FB21D6000EDF70690099C7C9 /* lens_backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB21D5FF0EDF70690099C7C9 /* lens_backend.cpp */; };
+		FB21D6880EDF8DB40099C7C9 /* cairo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBC0079D0EDD2F390003A992 /* cairo.framework */; };
 		FBC007A60EDD2F8E0003A992 /* cairo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC0079D0EDD2F390003A992 /* cairo.framework */; };
 		FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007AC0EDD83E30003A992 /* LensController.mm */; };
-		FBC007B40EDD842E0003A992 /* CairoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC007B30EDD842E0003A992 /* CairoView.m */; };
+		FBC007B40EDD842E0003A992 /* CairoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007B30EDD842E0003A992 /* CairoView.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FB21D6BB0EDF8E820099C7C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FBC007950EDD2F390003A992 /* Cairo.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FB102D9E0E45AFB300C8ECBD;
+			remoteInfo = Cairo;
+		};
 		FBC0079C0EDD2F390003A992 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FBC007950EDD2F390003A992 /* Cairo.xcodeproj */;
@@ -60,7 +68,7 @@
 		FBC007AB0EDD83E30003A992 /* LensController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LensController.h; sourceTree = "<group>"; };
 		FBC007AC0EDD83E30003A992 /* LensController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LensController.mm; sourceTree = "<group>"; };
 		FBC007B20EDD842E0003A992 /* CairoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CairoView.h; sourceTree = "<group>"; };
-		FBC007B30EDD842E0003A992 /* CairoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CairoView.m; sourceTree = "<group>"; };
+		FBC007B30EDD842E0003A992 /* CairoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CairoView.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB21D6880EDF8DB40099C7C9 /* cairo.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +90,7 @@
 				FBC007AB0EDD83E30003A992 /* LensController.h */,
 				FBC007AC0EDD83E30003A992 /* LensController.mm */,
 				FBC007B20EDD842E0003A992 /* CairoView.h */,
-				FBC007B30EDD842E0003A992 /* CairoView.m */,
+				FBC007B30EDD842E0003A992 /* CairoView.mm */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -189,6 +198,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FB21D6BC0EDF8E820099C7C9 /* PBXTargetDependency */,
 			);
 			name = "Lens Refraction";
 			productInstallPath = "$(HOME)/Applications";
@@ -248,12 +258,20 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */,
-				FBC007B40EDD842E0003A992 /* CairoView.m in Sources */,
+				FBC007B40EDD842E0003A992 /* CairoView.mm in Sources */,
 				FB21D6000EDF70690099C7C9 /* lens_backend.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB21D6BC0EDF8E820099C7C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cairo;
+			targetProxy = FB21D6BB0EDF8E820099C7C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
