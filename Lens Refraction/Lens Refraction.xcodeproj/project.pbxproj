@@ -11,8 +11,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FB21D6000EDF70690099C7C9 /* lens_backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB21D5FF0EDF70690099C7C9 /* lens_backend.cpp */; };
 		FBC007A60EDD2F8E0003A992 /* cairo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC0079D0EDD2F390003A992 /* cairo.framework */; };
-		FBC007AD0EDD83E30003A992 /* LensController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC007AC0EDD83E30003A992 /* LensController.m */; };
+		FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007AC0EDD83E30003A992 /* LensController.mm */; };
 		FBC007B40EDD842E0003A992 /* CairoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBC007B30EDD842E0003A992 /* CairoView.m */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +22,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = FBC007950EDD2F390003A992 /* Cairo.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = FB102D9F0E45AFB300C8ECBD /* cairo.framework */;
+			remoteGlobalIDString = FB102D9F0E45AFB300C8ECBD;
 			remoteInfo = Cairo;
 		};
 /* End PBXContainerItemProxy section */
@@ -50,9 +51,14 @@
 		32CA4F630368D1EE00C91783 /* Lens Refraction_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Lens Refraction_Prefix.pch"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Lens Refraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lens Refraction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB21D5FE0EDF70690099C7C9 /* lens_backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lens_backend.h; path = backend/lens_backend.h; sourceTree = "<group>"; };
+		FB21D5FF0EDF70690099C7C9 /* lens_backend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lens_backend.cpp; path = backend/lens_backend.cpp; sourceTree = "<group>"; };
+		FB21D6020EDF72C90099C7C9 /* vector2d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vector2d.h; path = backend/vector2d.h; sourceTree = "<group>"; };
+		FB21D6030EDF73020099C7C9 /* mathutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mathutil.h; path = backend/mathutil.h; sourceTree = "<group>"; };
+		FB21D6040EDF73210099C7C9 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = backend/types.h; sourceTree = "<group>"; };
 		FBC007950EDD2F390003A992 /* Cairo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cairo.xcodeproj; path = ../deps/cairo/proj/Cairo.xcodeproj; sourceTree = SOURCE_ROOT; };
 		FBC007AB0EDD83E30003A992 /* LensController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LensController.h; sourceTree = "<group>"; };
-		FBC007AC0EDD83E30003A992 /* LensController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LensController.m; sourceTree = "<group>"; };
+		FBC007AC0EDD83E30003A992 /* LensController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LensController.mm; sourceTree = "<group>"; };
 		FBC007B20EDD842E0003A992 /* CairoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CairoView.h; sourceTree = "<group>"; };
 		FBC007B30EDD842E0003A992 /* CairoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CairoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				FBC007AB0EDD83E30003A992 /* LensController.h */,
-				FBC007AC0EDD83E30003A992 /* LensController.m */,
+				FBC007AC0EDD83E30003A992 /* LensController.mm */,
 				FBC007B20EDD842E0003A992 /* CairoView.h */,
 				FBC007B30EDD842E0003A992 /* CairoView.m */,
 			);
@@ -110,6 +116,7 @@
 		29B97314FDCFA39411CA2CEA /* Lens Refraction */ = {
 			isa = PBXGroup;
 			children = (
+				FB21D6010EDF712B0099C7C9 /* Backend */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -145,6 +152,18 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB21D6010EDF712B0099C7C9 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				FB21D6040EDF73210099C7C9 /* types.h */,
+				FB21D6030EDF73020099C7C9 /* mathutil.h */,
+				FB21D6020EDF72C90099C7C9 /* vector2d.h */,
+				FB21D5FE0EDF70690099C7C9 /* lens_backend.h */,
+				FB21D5FF0EDF70690099C7C9 /* lens_backend.cpp */,
+			);
+			name = Backend;
 			sourceTree = "<group>";
 		};
 		FBC007960EDD2F390003A992 /* Products */ = {
@@ -228,8 +247,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				FBC007AD0EDD83E30003A992 /* LensController.m in Sources */,
+				FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */,
 				FBC007B40EDD842E0003A992 /* CairoView.m in Sources */,
+				FB21D6000EDF70690099C7C9 /* lens_backend.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "../deps/cairo/proj/build/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -304,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				FRAMEWORK_SEARCH_PATHS = "../deps/cairo/proj/build/$(CONFIGURATION)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
