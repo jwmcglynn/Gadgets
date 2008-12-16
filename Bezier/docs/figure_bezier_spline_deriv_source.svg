@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 13.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1 Tiny//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1" baseProfile="tiny"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" width="182" height="103">
+
+<g transform="translate(67, 66)">
+	<path fill="none" stroke="#000000" d="M0-63Q-63,34,112,34" />
+	
+	<!-- Draw rects and lines for control points. -->
+	<line stroke="lightseagreen" x1="0" y1="-63" x2="-63" y2="34"/>
+	<line stroke="lightseagreen" x1="112" y1="34" x2="-63" y2="34" />
+	
+	<rect fill="white" stroke="lightseagreen" width="3" height="3" x="-1.5" y="-64.5" />
+	<rect fill="white" stroke="lightseagreen" width="3" height="3" x="-65.5" y="32.5" />
+	<rect fill="white" stroke="lightseagreen" width="3" height="3" x="110.5" y="32.5" />
+</g>
+
+</svg>
