@@ -2,3 +2,6 @@
 *.aux
 explanation.pdf
 *.toc
+*.bbl
+*.blg
+*.out
