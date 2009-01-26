@@ -11,6 +11,7 @@
 
 #include <cairo/cairo.h>
 #include "vector2d.h"
+#include <vector>
 using namespace donner;
 
 static const f32 k_meters_to_pixels = 100.0f;
@@ -59,7 +60,20 @@ public:
 		: m_left_radius(1.5f),
 		  m_right_radius(1.5f),
 		  m_inside_n(1.5f),
-		  m_outside_n(1.0f) { }
+		  m_outside_n(1.0f) {
+		
+		// Build the presets array.
+		m_presets.push_back(index("Vacuum", 1.0f));
+		m_presets.push_back(index("Air @ STP", 1.0002926f));
+		m_presets.push_back(index("Helium (0°C, 1 atm)", 1.000036f));
+		m_presets.push_back(index("Hydrogen (0°C, 1 atm)", 1.000132f));
+		m_presets.push_back(index("Benzene (20°C)", 1.501f));
+		m_presets.push_back(index("Water (20°C)", 1.333f));
+		m_presets.push_back(index("Ethyl Alcohol (20°C)", 1.361f));
+		m_presets.push_back(index("Diamond", 2.419f));
+		m_presets.push_back(index("Water Ice", 1.31f));
+		m_presets.push_back(index("Silicon", 4.01f));
+	}
 	
 	/**
 	 * Called to render to the view.
@@ -83,19 +97,36 @@ public:
 	
 	/*************************************************************************/
 	
-	/// Sets the radius of the left of the lens.
-	void set_left_radius(f32 r) { m_left_radius = r; std::cout << "Left radius = " << m_left_radius << std::endl; }
+	/// Gets/sets the radius of the left of the lens.
+	f32 left_radius() const { return m_left_radius; }
+	void left_radius(f32 r) { m_left_radius = r; }
 	
-	/// Sets the radius of the right of the lens.
-	void set_right_radius(f32 r) { m_right_radius = r; std::cout << "Right radius = " << m_right_radius << std::endl; }
+	/// Gets/sets the radius of the right of the lens.
+	f32 right_radius() const { return m_right_radius; }
+	void right_radius(f32 r) { m_right_radius = r; }
 	
-	/// Sets the refractive index of the inside of the lens.
-	void set_inside_n(f32 n) { m_inside_n = n; }
+	/// Gets/sets the refractive index of the inside of the lens.
+	f32 inside_n() const { return m_inside_n; }
+	void inside_n(f32 n) { m_inside_n = n; }
 	
-	/// Sets the refractive index of the outside of the lens.
-	void set_outside_n(f32 n) { m_inside_n = n; }
+	/// Gets/sets the refractive index of the outside of the lens.
+	f32 outside_n() const { return m_outside_n; }
+	void outside_n(f32 n) { m_outside_n = n; }
+	
+	/// Gets the list of presets for indices of refraction.
+	struct index {
+		index(std::string _name, f32 _n) : name(_name), n(_n) { }
+		
+		std::string name;
+		f32 n;
+	};
+	
+	typedef std::vector<index> index_array;
+	const index_array& n_presets() { return m_presets; }
 	
 private:
+	index_array m_presets;
+	
 	f32 m_left_radius;
 	f32 m_right_radius;
 	

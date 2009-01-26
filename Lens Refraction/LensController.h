@@ -7,14 +7,28 @@
 class lens_backend;
 
 @interface LensController : NSObject {
-	CairoView * m_view;
-	NSTextField * m_left_radius;
-	NSTextField * m_right_radius;
-	
-	NSTextField * m_lens_n;
-	NSTextField * m_outside_n;
-	
+	IBOutlet CairoView * m_view;
 	lens_backend * m_backend;
+	
+	/*************************************************************************/
+	// Radius.
+	
+	// Text boxes.
+	IBOutlet NSTextField * m_left_radius;
+	IBOutlet NSTextField * m_right_radius;
+	
+	// Sliders.
+	IBOutlet NSSlider * m_left_radius_slider;
+	IBOutlet NSSlider * m_right_radius_slider;
+	
+	/*************************************************************************/
+	// Index of refraction.
+	
+	IBOutlet NSFormCell * m_inside_n;
+	IBOutlet NSFormCell * m_outside_n;
+	
+	IBOutlet NSPopUpButton * m_inside_presets;
+	IBOutlet NSPopUpButton * m_outside_presets;
 }
 
 /**
@@ -28,15 +42,20 @@ class lens_backend;
 - (void) onRender: (cairo_t *) context: (float) width: (float) height;
 
 /// Called when the left radius field changes.
-- (void) onLeftRadiusChange: (id) caller;
+- (IBAction) onLeftRadiusChange: (id) caller;
+- (IBAction) onLeftRadiusSliderChange: (id) caller;
 
 /// Called when the right radius field changes.
-- (void) onRightRadiusChange: (id) caller;
+- (IBAction) onRightRadiusChange: (id) caller;
+- (IBAction) onRightRadiusSliderChange: (id) caller;
+
+/// Called when the refraction presets are changed.
+- (void) onSelectPreset: (NSMenuItem *) caller;
 
 /// Called when the inside refraction index changes.
-- (void) onInsideNChange: (id) caller;
+- (IBAction) onInsideNChange: (id) caller;
 
 /// Called when the outside refraction index changes.
-- (void) onOutsideNChange: (id) caller;
+- (IBAction) onOutsideNChange: (id) caller;
 
 @end
