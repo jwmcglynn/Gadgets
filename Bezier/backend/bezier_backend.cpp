@@ -43,10 +43,25 @@ void bezier_backend::render(cairo_t * context, const vector2dd& size) {
 	cairo_set_source_rgb(context, 0.0, 0.0, 0.0);
 	cairo_paint(context);
 	
+	// Draw bounds of curve.
+	cairo_set_source_rgb(context, 0.1, 0.1, 0.1);
+	cairo_set_line_join(context, CAIRO_LINE_JOIN_MITER);
+	cairo_set_line_width(context, 0.5);
+	cairo_set_antialias(context, CAIRO_ANTIALIAS_NONE);
+	
+	aabboxd bounds = m_curve.bounds();
+	cairo_rectangle(context, bounds.origin.x, bounds.origin.y, bounds.extent.x, bounds.extent.y);
+	cairo_fill_preserve(context);
+	
+	cairo_set_source_rgb(context, 0.5, 0.5, 1.0);
+	cairo_stroke(context);
+	
+	
 	// Draw lines between the control points.
 	cairo_set_source_rgb(context, 0.3, 0.3, 0.3);
 	cairo_set_line_join(context, CAIRO_LINE_JOIN_ROUND);
 	cairo_set_line_width(context, 2.0);
+	cairo_set_antialias(context, CAIRO_ANTIALIAS_DEFAULT);
 	
 	cairo_move_to(context, m_curve.origin.x, m_curve.origin.y);
 	cairo_line_to(context, m_curve.control_1.x, m_curve.control_1.y);
