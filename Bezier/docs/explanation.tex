@@ -85,7 +85,7 @@ This is the general derivative of a \Bezier\ curve.
 
 
 
-\section{Normal Vector}
+\section{Tangent Vector}
 
 \begin{figure}[htp]
 \begin{center}
@@ -103,28 +103,17 @@ This is the general derivative of a \Bezier\ curve.
 \end{center}
 \end{figure}
 
-As $\mathbf{B}(t)$ is a vector, the normalized first derivative is the direction of the normal vector, or $\mathbf{N}(t).$
+As $\mathbf{B}(t)$ is a vector, the normalized first derivative is the direction of the tangent vector, or $\mathbf{N}(t).$
 
-\begin{equation}\label{eqn:bezier_normal}
+\begin{equation}\label{eqn:bezier_tangent}
 	\mathbf{N}(t) = \cfrac{\sum_{i=0}^{n-1} n B_{n-1,i}(t) [ \mathbf{P}_{i+1} - \mathbf{P}_i ]}{\norm{\sum_{i=0}^{n-1} n B_{n-1,i}(t) [ \mathbf{P}_{i+1} - \mathbf{P}_i ]}}
 \end{equation}
 
-In Figure \ref{fig:bezier_spline_normal}, the normal vector is shown at several locations along the Bezier curve.
-
-\begin{figure}[htp]
-\begin{center}
-	\label{fig:bezier_spline_normal}
-	% Placeholder.
-	\vspace{130pt}
-	\caption{\Bezier\ Curve and Normal Vectors}
-\end{center}
-\end{figure}
 
 
+\section{Normal Vector}
 
-\section{Tangent Vector}
-
-The tangent vector is the normalized second derivative of the \Bezier\ curve equation \eqref{eqn:bezier_general}.
+The normal vector is the normalized second derivative of the \Bezier\ curve equation \eqref{eqn:bezier_general}.
 
 \subsection{Bernstein Polynomial}
 First, we find the second derivative of the Bernstein polynomial \eqref{eqn:bernstein_deriv}.
@@ -164,8 +153,6 @@ The bounds of a \Bezier\ curve coincide with its extrema.  To find the extrema, 
 Critical points are found by setting $\mathbf{B}'(t) = 0$ and solving for $t$.  To confirm, the second derivative test may be used, but it is often computationally faster to consider all critical points when determining the bounding box instead of classifying them.
 
 For a cubic curve, the derivative is a quadratic curve which can be solved with the quadratic equation.
-
-TODO: Example.
 
 % Print the bibliography.
 \newpage
