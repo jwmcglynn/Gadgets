@@ -24,6 +24,7 @@
 #ifndef _CUBIC_BEZIER_H
 #define _CUBIC_BEZIER_H
 
+#include <stdexcept>
 #include "vector2d.h"
 #include "aabbox.h"
 using namespace dnr;
@@ -45,6 +46,20 @@ public:
 			  control_1(-100.0, 150.0),
 			  control_2(0.0, -140.0),
 			  endpoint(150.0, 50.0) {
+	}
+	
+	/*************************************************************************/
+	// Helper operators.
+	
+	vector2dd& operator[](size_t idx) {
+		switch (idx) {
+			case 0:		return origin;
+			case 1:		return control_1;
+			case 2:		return control_2;
+			case 3:		return endpoint;
+			default:
+				throw std::out_of_range("invalid index");
+		}
 	}
 	
 	/*************************************************************************/

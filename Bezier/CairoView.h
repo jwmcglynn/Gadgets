@@ -9,4 +9,9 @@
 
 - (void) drawRect: (NSRect) rect;
 
+// Mouse commands.
+- (void) mouseDown: (NSEvent *) ev;
+- (void) mouseDragged: (NSEvent *) ev;
+- (void) mouseUp: (NSEvent *) ev;
+
 @end

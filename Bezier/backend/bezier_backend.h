@@ -33,11 +33,17 @@ using namespace dnr;
 
 class bezier_backend {
 private:
+	bool m_needs_redraw;
+	vector2dd * m_anchor;
+	
 	cubic_bezier m_curve;
 	f64 m_t;
 	
 public:
-	bezier_backend() { }
+	bezier_backend()
+			: m_needs_redraw(true)
+			, m_t(0.0)
+			, m_anchor(0) { }
 	
 	/**
 	 * Called to render to the view.
@@ -47,17 +53,17 @@ public:
 	/**
 	 * Called when the mouse is pressed.
 	**/
-	void click(const vector2dd& pos) { }
+	void click(const vector2dd& pos, bool inside);
 	
 	/**
 	 * Called when the mouse is moved when being held.
 	**/
-	void drag(const vector2dd& pos) { }
+	void drag(const vector2dd& pos, bool inside);
 	
 	/**
 	 * Called when the mouse is released.
 	**/
-	void release(const vector2dd& pos) { }
+	void release(const vector2dd& pos, bool inside);
 	
 	/*************************************************************************/
 	// Accessors.
@@ -71,6 +77,11 @@ public:
 	 * Set the position on the spline.
 	**/
 	void t(f64 _t) { m_t = _t; }
+	
+	/**
+	 * Does the view need to be redrawn?
+	**/
+	bool needs_redraw() const { return m_needs_redraw; }
 };
 
 /*****************************************************************************/

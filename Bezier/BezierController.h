@@ -16,8 +16,10 @@ class bezier_backend;
 
 @interface BezierController : NSObject {
 	IBOutlet CairoView * m_view;
+@public	
 	bezier_backend * m_backend;
 	
+@protected
 	// Controls.
 	IBOutlet NSTextField * m_t_field;
 	IBOutlet NSSlider * m_t_slider;

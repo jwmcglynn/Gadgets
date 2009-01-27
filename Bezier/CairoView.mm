@@ -1,5 +1,6 @@
 #import "CairoView.h"
 #import "BezierController.h"
+#include "backend/bezier_backend.h"
 
 #include <cairo/cairo.h>
 #include <cairo/cairo-quartz.h>
@@ -23,5 +24,29 @@ using namespace dnr;
 	cairo_surface_flush(surf);
 	cairo_surface_destroy(surf);
 }
+
+/**
+ * All of the mouse commands are the same, but call a different method in the
+ * backend.  This macro implements them but allows the method name and backend
+ * method name to be changed.
+**/
+#define IMPLEMENT_MOUSE_COMMAND(fcn_name, callback) \
+- (void) fcn_name: (NSEvent *) ev { \
+	NSPoint mouse_loc = [self convertPoint: [ev locationInWindow]  fromView: nil]; \
+	BOOL is_inside = [self mouse: mouse_loc  inRect: [self bounds]]; \
+	 \
+	mouse_loc = NSMakePoint(mouse_loc.x - 0.5 * [self bounds].size.width, mouse_loc.y - 0.5 * [self bounds].size.height); \
+	 \
+	vector2dd pos(mouse_loc.x, mouse_loc.y); \
+	m_controller->m_backend->callback(pos, is_inside); \
+	 \
+	if (m_controller->m_backend->needs_redraw()) [self setNeedsDisplay:YES]; \
+}
+
+IMPLEMENT_MOUSE_COMMAND(mouseDown, click)
+IMPLEMENT_MOUSE_COMMAND(mouseDragged, drag)
+IMPLEMENT_MOUSE_COMMAND(mouseUp, release)
+
+#undef IMPLEMENT_MOUSE_COMMAND
 
 @end
