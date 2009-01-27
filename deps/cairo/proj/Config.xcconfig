@@ -3,7 +3,7 @@
 // Pixman architectures.
 // SSE and MMX aren't supported for amd64 and x86_64
 MACROS[arch=i386] = $(MACROS) USE_SSE2 USE_MMX
-MACROS[arch=ppc*] = $(MACROS) USE_VMX WORDS_BIGENDIAN
+MACROS[arch=ppc*] = $(MACROS) USE_VMX WORDS_BIGENDIAN=1 FLOAT_WORDS_BIGENDIAN=1
 
 // Configure #defines.
 MACROS = $(MACROS) HAVE_STDINT_H HAVE_PTHREAD_H HAVE_UINT64_T HAVE_LIBGEN_H HAVE_CONFIG_H
@@ -11,4 +11,3 @@ MACROS = $(MACROS) HAVE_STDINT_H HAVE_PTHREAD_H HAVE_UINT64_T HAVE_LIBGEN_H HAVE
 CFLAGS = $(CFLAGS) -Isurrogate
 CFLAGS[arch=i386] = $(CFLAGS) -msse -mmmx -Winline --param inline-unit-growth=10000 --param large-function-growth=10000
 CFLAGS[arch=x86_64] = $(CFLAGS) -Winline --param inline-unit-growth=10000 --param large-function-growth=10000
-
