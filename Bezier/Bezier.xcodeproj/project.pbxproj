@@ -11,6 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FB2D47120F2F58270099AAC0 /* app_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = FB2D47110F2F58270099AAC0 /* app_icon.icns */; };
 		FBEB5D110F2E0F1200617451 /* CairoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBEB5D100F2E0F1200617451 /* CairoView.mm */; };
 		FBEB5D150F2E0F3F00617451 /* BezierController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBEB5D140F2E0F3F00617451 /* BezierController.mm */; };
 		FBEB5D180F2E0FD600617451 /* bezier_backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FBEB5D170F2E0FD600617451 /* bezier_backend.cpp */; };
@@ -59,6 +60,7 @@
 		32CA4F630368D1EE00C91783 /* Bezier_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bezier_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Bézier Curve Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bézier Curve Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2D47110F2F58270099AAC0 /* app_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = app_icon.icns; sourceTree = "<group>"; };
 		FB8A3DFD0F2F109F00D550CA /* aabbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aabbox.h; path = backend/aabbox.h; sourceTree = "<group>"; };
 		FBEB5D0F0F2E0F1200617451 /* CairoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CairoView.h; sourceTree = "<group>"; };
 		FBEB5D100F2E0F1200617451 /* CairoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CairoView.mm; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FB2D47110F2F58270099AAC0 /* app_icon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
@@ -250,6 +253,7 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				FB2D47120F2F58270099AAC0 /* app_icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +333,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = "Bézier Curve Demo";
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
 		};
