@@ -9,7 +9,12 @@
 #ifndef _LENS_BACKEND_H
 #define _LENS_BACKEND_H
 
+#ifdef WINDOWS
+#include <cairo.h>
+#else
 #include <cairo/cairo.h>
+#endif
+
 #include "vector2d.h"
 #include <vector>
 using namespace donner;
@@ -134,4 +139,4 @@ private:
 	f32 m_outside_n;
 };
 
-#endif _LENS_BACKEND_H
+#endif // _LENS_BACKEND_H

@@ -1,5 +1,9 @@
 #import <Cocoa/Cocoa.h>
+#ifdef WINDOWS
+#include <cairo.h>
+#else
 #include <cairo/cairo.h>
+#endif
 
 @class CairoView;
 
