@@ -1,10 +1,6 @@
 #import <Cocoa/Cocoa.h>
-#ifdef WINDOWS
-#include <cairo.h>
-#else
-#include <cairo/cairo.h>
-#endif
 
+typedef struct _cairo cairo_t;
 @class CairoView;
 
 // C++ backend.

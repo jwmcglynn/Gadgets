@@ -16,7 +16,27 @@
 		FBC007A60EDD2F8E0003A992 /* cairo.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FBC0079D0EDD2F390003A992 /* cairo.framework */; };
 		FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007AC0EDD83E30003A992 /* LensController.mm */; };
 		FBC007B40EDD842E0003A992 /* CairoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007B30EDD842E0003A992 /* CairoView.mm */; };
+		FBFDD5080F377EC50086325C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		FBFDD5090F377EC50086325C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		FBFDD50B0F377EC50086325C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		FBFDD50C0F377EC50086325C /* LensController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007AC0EDD83E30003A992 /* LensController.mm */; };
+		FBFDD50D0F377EC50086325C /* CairoView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FBC007B30EDD842E0003A992 /* CairoView.mm */; };
+		FBFDD50E0F377EC50086325C /* lens_backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB21D5FF0EDF70690099C7C9 /* lens_backend.cpp */; };
+		FBFDD5110F377EC50086325C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		FBFDD66B0F3781410086325C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		FBFDD66C0F3781410086325C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		FBFDD51A0F377FA30086325C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		FB21D6BB0EDF8E820099C7C9 /* PBXContainerItemProxy */ = {
@@ -69,6 +89,7 @@
 		FBC007AC0EDD83E30003A992 /* LensController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LensController.mm; sourceTree = "<group>"; };
 		FBC007B20EDD842E0003A992 /* CairoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CairoView.h; sourceTree = "<group>"; };
 		FBC007B30EDD842E0003A992 /* CairoView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CairoView.mm; sourceTree = "<group>"; };
+		FBFDD5170F377EC50086325C /* Lens Refraction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lens Refraction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +99,16 @@
 			files = (
 				FB21D6880EDF8DB40099C7C9 /* cairo.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBFDD50F0F377EC50086325C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFDD66B0F3781410086325C /* AppKit.framework in Frameworks */,
+				FBFDD66C0F3781410086325C /* Foundation.framework in Frameworks */,
+				FBFDD5110F377EC50086325C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* Lens Refraction.app */,
+				FBFDD5170F377EC50086325C /* Lens Refraction.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -206,6 +238,26 @@
 			productReference = 8D1107320486CEB800E47090 /* Lens Refraction.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FBFDD5040F377EC50086325C /* Lens Refraction Win */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBFDD5140F377EC50086325C /* Build configuration list for PBXNativeTarget "Lens Refraction Win" */;
+			buildPhases = (
+				FBFDD5070F377EC50086325C /* Resources */,
+				FBFDD50A0F377EC50086325C /* Sources */,
+				FBFDD50F0F377EC50086325C /* Frameworks */,
+				FBFDD69D0F3782B60086325C /* ShellScript */,
+			);
+			buildRules = (
+				FBFDD51A0F377FA30086325C /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "Lens Refraction Win";
+			productInstallPath = "$(HOME)/Applications";
+			productName = "Lens Refraction";
+			productReference = FBFDD5170F377EC50086325C /* Lens Refraction.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* Lens Refraction */,
+				FBFDD5040F377EC50086325C /* Lens Refraction Win */,
 			);
 		};
 /* End PBXProject section */
@@ -249,7 +302,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FBFDD5070F377EC50086325C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFDD5080F377EC50086325C /* InfoPlist.strings in Resources */,
+				FBFDD5090F377EC50086325C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBFDD69D0F3782B60086325C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Developer/Cocotron/1.0/bin/retargetBundle -framework Foundation -framework AppKit -destination \"$TARGET_BUILD_DIR/$EXECUTABLE_FOLDER_PATH\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -260,6 +338,17 @@
 				FBC007AD0EDD83E30003A992 /* LensController.mm in Sources */,
 				FBC007B40EDD842E0003A992 /* CairoView.mm in Sources */,
 				FB21D6000EDF70690099C7C9 /* lens_backend.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBFDD50A0F377EC50086325C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBFDD50B0F377EC50086325C /* main.m in Sources */,
+				FBFDD50C0F377EC50086325C /* LensController.mm in Sources */,
+				FBFDD50D0F377EC50086325C /* CairoView.mm in Sources */,
+				FBFDD50E0F377EC50086325C /* lens_backend.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +441,54 @@
 			};
 			name = Release;
 		};
+		FBFDD5150F377EC50086325C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = stabs;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/Frameworks,
+					"../deps/cairo/proj/build/$(CONFIGURATION)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lens Refraction_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Lens Refraction";
+				SDKROOT = "";
+				SYMROOT = build/win;
+			};
+			name = Debug;
+		};
+		FBFDD5160F377EC50086325C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(NATIVE_ARCH)";
+				DEBUG_INFORMATION_FORMAT = stabs;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/Frameworks,
+					"../deps/cairo/proj/build/$(CONFIGURATION)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lens Refraction_Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "Lens Refraction";
+				SDKROOT = "";
+				STRIP_INSTALLED_PRODUCT = YES;
+				SYMROOT = build/win;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -369,6 +506,15 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBFDD5140F377EC50086325C /* Build configuration list for PBXNativeTarget "Lens Refraction Win" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBFDD5150F377EC50086325C /* Debug */,
+				FBFDD5160F377EC50086325C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

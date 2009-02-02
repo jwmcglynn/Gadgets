@@ -9,11 +9,7 @@
 #ifndef _LENS_BACKEND_H
 #define _LENS_BACKEND_H
 
-#ifdef WINDOWS
-#include <cairo.h>
-#else
-#include <cairo/cairo.h>
-#endif
+typedef struct _cairo cairo_t;
 
 #include "vector2d.h"
 #include <vector>

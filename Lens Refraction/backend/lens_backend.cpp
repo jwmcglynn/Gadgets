@@ -41,7 +41,7 @@ bool circle::ray_intersect(vector2dd start, vector2dd dir, vector2dd& intersecti
 **/
 void lens_backend::render(cairo_t * context, const vector2dd& size) {
 	vector2dd center(size * 0.5);
-	
+	/*
 	cairo_set_source_rgb(context, 1.0, 1.0, 1.0);
 	cairo_move_to(context, center.x, center.y + k_lens_half_height * k_meters_to_pixels);
 	
@@ -208,5 +208,5 @@ void lens_backend::render(cairo_t * context, const vector2dd& size) {
 			cairo_rel_line_to(context, ray_dir.x * max_dim, ray_dir.y * max_dim);
 			cairo_stroke(context);
 		}
-	}
+	}*/
 }
