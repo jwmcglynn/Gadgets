@@ -1,8 +1,15 @@
 #import "CairoView.h"
 #import "LensController.h"
 
+#ifdef WINDOWS
+#include <cairo.h>
+#else
 #include <cairo/cairo.h>
+#endif
+
+#if CAIRO_HAS_QUARTZ_SURFACE
 #include <cairo/cairo-quartz.h>
+#endif
 
 #include "backend/vector2d.h"
 using namespace donner;
@@ -13,14 +20,18 @@ using namespace donner;
 	CGContextRef window_ctx = (CGContextRef) [[NSGraphicsContext currentContext] graphicsPort];
 	
 	// Draw the rectangle using cairo.
+	#if CAIRO_HAS_QUARTZ_SURFACE
 	cairo_surface_t * surf = cairo_quartz_surface_create(CAIRO_FORMAT_RGB24, rect.size.width, rect.size.height);
+	#else
+	cairo_surface_t * surf = cairo_image_surface_create(CAIRO_FORMAT_RGB24, rect.size.width, rect.size.height);
+	#endif
 	cairo_surface_set_device_offset(surf, rect.origin.x, rect.origin.y);
 	
 	cairo_t * ctx = cairo_create(surf);
 	[m_controller onRender: ctx: rect.size.width: rect.size.height];
 	cairo_destroy(ctx);
 	
-	
+	#if CAIRO_HAS_QUARTZ_SURFACE
 	CGContextRef img_ctx = (CGContextRef) cairo_quartz_surface_get_cg_context(surf);
 	
 	// Draw the image.
@@ -30,6 +41,9 @@ using namespace donner;
 		CGImageRelease(img);
 		CGContextFlush(window_ctx);
 	}
+	#else
+	// TODO.
+	#endif
 	
 	cairo_surface_destroy(surf);
 }
