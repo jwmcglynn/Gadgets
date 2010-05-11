@@ -23,7 +23,6 @@
 
 #include "bezier_backend.h"
 
-namespace dnr {
 /*****************************************************************************/
 
 static const f64 k_anchor_radius = 4.0;
@@ -158,4 +157,3 @@ void bezier_backend::release(const vector2dd& pos, bool inside) {
 }
 
 /*****************************************************************************/
-} // End of namespace dnr.

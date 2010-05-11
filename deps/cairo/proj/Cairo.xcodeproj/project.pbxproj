@@ -692,7 +692,7 @@
 					../pixman/pixman,
 				);
 				OTHER_CFLAGS = "$(CFLAGS)";
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Release;
 		};
